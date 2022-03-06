@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TUTORial.LearningExercisePage">
+    <StackLayout
+        HorizontalOptions="Center"
+        VerticalOptions="Start">
+        <Button
+            Text="Next"
+            Clicked="CycleText">
+        </Button>
+        <Slider x:Name="fontSizeSlider" Maximum="64.0" Minimum="8.0"></Slider>
+        <Label
+            BindingContext="{x:Reference fontSizeSlider}"
+            x:Name="quoteLabel"
+            FontSize="{Binding Value}"
+            HorizontalOptions="Fill">
+        </Label>
+    </StackLayout>
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+            iOS="0, 20, 0, 0"
+            Default="0, 0, 0, 0">
+        </OnPlatform>
+    </ContentPage.Padding>
+</ContentPage>
