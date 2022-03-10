@@ -10,7 +10,10 @@ namespace TUTORial
         {
             InitializeComponent();
 
-            MainPage = new LearningExercisePage();
+            var rootPage = new LearningPage();
+            var navPage = new NavigationPage(rootPage);
+
+            MainPage = navPage;
         }
 
         protected override void OnStart()

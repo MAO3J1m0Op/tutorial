@@ -10,6 +10,8 @@ namespace TUTORial
         public LearningPage()
         {
             InitializeComponent();
+
+            // Initialize the slider
             slider.Value = 0.5;
         }
 
@@ -21,6 +23,11 @@ namespace TUTORial
         void ResetSlider(object sender, EventArgs e)
         {
             slider.Value = 0.5;
+        }
+
+        async void GoToExercise(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LearningExercisePage());
         }
     }
 }

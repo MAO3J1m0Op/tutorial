@@ -3,25 +3,25 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="TUTORial.LearningExercisePage">
+    <ContentPage.Title>
+        Xamarin Exercise
+    </ContentPage.Title>
     <StackLayout
         HorizontalOptions="Center"
         VerticalOptions="Start">
         <Button
             Text="Next"
-            Clicked="CycleText">
-        </Button>
-        <Slider x:Name="fontSizeSlider" Maximum="64.0" Minimum="8.0"></Slider>
+            Clicked="CycleText"/>
+        <Slider x:Name="fontSizeSlider" Maximum="64.0" Minimum="8.0"/>
         <Label
             BindingContext="{x:Reference fontSizeSlider}"
             x:Name="quoteLabel"
             FontSize="{Binding Value}"
-            HorizontalOptions="Fill">
-        </Label>
+            HorizontalOptions="Fill"/>
     </StackLayout>
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness"
             iOS="0, 20, 0, 0"
-            Default="0, 0, 0, 0">
-        </OnPlatform>
+            Default="0, 0, 0, 0"/>
     </ContentPage.Padding>
 </ContentPage>
