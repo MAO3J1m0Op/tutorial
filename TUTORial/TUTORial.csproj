@@ -13,4 +13,10 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.1" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Learning Pages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Learning Pages\" />
+  </ItemGroup>
 </Project>
